@@ -38,10 +38,20 @@ const SplashHero = () => {
 
       {/* ---- TEXT CONTENT ---- */}
       <div
-        className="container h-100 d-flex flex-column justify-content-center align-items-start"
+        className="container h-100 d-flex flex-column justify-content-center  align-items-center text-start"
         style={{ position: 'relative', zIndex: 3 }}
       >
         {/* Title */}
+        <h1
+          className="fw-bold "
+          style={{
+            fontSize: '3rem',
+            color: '#ffffff',
+            textShadow: '0px 4px 10px rgba(0,0,0,0.7)',
+          }}
+        >
+          Climbing high.
+        </h1>
         <h1
           className="fw-bold"
           style={{
@@ -50,27 +60,22 @@ const SplashHero = () => {
             textShadow: '0px 4px 10px rgba(0,0,0,0.7)',
           }}
         >
-          Explorer les Sommets
+          Running far.
         </h1>
-
-        {/* Subtitle */}
-        <p
-          className="mt-3"
+        <h1
+          className="fw-bold"
           style={{
-            fontSize: '1.4rem',
-            maxWidth: '650px',
-            lineHeight: '1.6',
-            color: '#f0f0f0',
+            fontSize: '3rem',
+            color: '#ffffff',
+            textShadow: '0px 4px 10px rgba(0,0,0,0.7)',
           }}
         >
-          Nous organisons des voyages d’aventure pour passionnés d’escalade et
-          amoureux de montagnes. Découvrez des paysages uniques et vivez une
-          expérience inoubliable au cœur des sommets.
-        </p>
+          Learning always.
+        </h1>
 
         {/* CTA Button */}
         <a
-          href="#contact"
+          href="/My_Story"
           className="btn mt-4 px-4 py-2"
           style={{
             backgroundColor: '#2AA8A1',
@@ -84,7 +89,7 @@ const SplashHero = () => {
           onMouseOver={(e) => (e.target.style.backgroundColor = '#218B86')}
           onMouseOut={(e) => (e.target.style.backgroundColor = '#2AA8A1')}
         >
-          Commencer l’aventure
+          Find out more
         </a>
       </div>
     </section>

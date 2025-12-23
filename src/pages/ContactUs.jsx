@@ -9,7 +9,7 @@ const ContactUs = () => {
 
   return (
     <div style={{ paddingTop: NAVBAR_HEIGHT }}>
-      <Container fluid style={{ height: pageHeight }}>
+      <Container fluid style={{ height: pageHeight }} className="bg-black">
         <Row style={{ height: '100%' }}>
           {/* LEFT IMAGE – visible only on md+ */}
           <Col md={6} className="d-none d-md-block p-0">
@@ -28,25 +28,25 @@ const ContactUs = () => {
           <Col
             xs={12}
             md={6}
-            className="d-flex justify-content-center align-items-center "
+            className="d-flex justify-content-center align-items-center  "
             style={{ height: '100%' }}
           >
-            <Card className="w-100 shadow-sm" style={{ maxWidth: '100%' }}>
+            <Card
+              className="w-100 shadow-sm text-white bg-black"
+              style={{ maxWidth: '100%' }}
+            >
               <Card.Body>
                 <h4 className="text-center mb-4 fw-bold">Contactez-nous</h4>
 
                 <Form>
                   <Form.Group className="mb-3">
-                    <Form.Label>Nom</Form.Label>
-                    <Form.Control placeholder="Votre nom" />
+                    <Form.Label>Nom Complet</Form.Label>
+                    <Form.Control placeholder="Votre nom Complet" />
                   </Form.Group>
 
                   <Form.Group className="mb-3">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="exemple@email.com"
-                    />
+                    <Form.Control type="email" placeholder="Votre Email" />
                   </Form.Group>
 
                   <Form.Group className="mb-3">
@@ -63,7 +63,9 @@ const ContactUs = () => {
                     />
                   </Form.Group>
 
-                  <Button className="w-100 py-2 fw-semibold">Envoyer</Button>
+                  <Button className="w-100 py-2 fw-semibold btn-warning">
+                    Envoyer
+                  </Button>
                 </Form>
               </Card.Body>
             </Card>

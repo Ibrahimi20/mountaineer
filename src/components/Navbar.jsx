@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { useLocation } from 'react-router-dom';
+import MountainTicker from './ountainTicker';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -69,21 +70,20 @@ const Navbar = () => {
           {/* MOBILE ICONS (TikTok + Instagram + three dots) */}
           <div className="d-flex align-items-center gap-3 d-lg-none text-white">
             <a
-              href="https://www.tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white fs-5"
-            >
-              <FaTiktok />
-            </a>
-
-            <a
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white fs-5"
             >
               <FaInstagram />
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white fs-5"
+            >
+              <FaLinkedinIn />
             </a>
 
             {/* BURGER / CLOSE BUTTON */}
@@ -102,11 +102,11 @@ const Navbar = () => {
 
           {/* DESKTOP MENU (center) */}
           <div className="d-none d-lg-flex flex-grow-1 justify-content-center">
-            <ul className="navbar-nav  whitespace-nowrap">
+            <ul className="navbar-nav  whitespace-nowrap gap-4">
               {navItems.slice(0, -1).map((item) => (
                 <li className="nav-item whitespace-nowrap" key={item.label}>
                   <Link
-                    className="nav-link text-uppercase text-white fw-bold px-2"
+                    className="nav-link text-uppercase text-white fw-bold px-2 custom-link"
                     style={{}}
                     to={item.to}
                   >
@@ -120,21 +120,21 @@ const Navbar = () => {
           {/* DESKTOP RIGHT SECTION */}
           <div className="d-none d-lg-flex align-items-center gap-3 text-white">
             <a
-              href="https://www.tiktok.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white fs-5 opacity-75"
-            >
-              <FaTiktok />
-            </a>
-
-            <a
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white fs-5 opacity-75"
             >
               <FaInstagram />
+            </a>
+
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white fs-5 opacity-75"
+            >
+              <FaLinkedinIn />
             </a>
 
             {/* CONTACT BUTTON */}
@@ -154,6 +154,17 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* ✅ MOUNTAIN TICKER UNDER NAVBAR */}
+      <div
+        style={{
+          position: 'fixed',
+          // top: scrolled ? '70px' : '90px', // adapt to navbar height
+          width: '100%',
+          zIndex: 1400,
+        }}
+      >
+        <MountainTicker />
+      </div>
       {/* MOBILE FULLSCREEN MENU */}
       <div
         className={`position-fixed top-0 start-0 w-100 h-100 d-lg-none 

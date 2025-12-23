@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import S2 from '../assets/S2/april12-ebc-97-2-d7e220b9-900.webp';
+import S2 from '../assets/prodssets/Climb_with_me.jpeg';
 import { Button, Col, Row } from 'react-bootstrap';
 
 const Story = () => {
@@ -7,8 +7,9 @@ const Story = () => {
     <Row className="w-100 align-items-center px-5 py-5 my-5  text-white">
       {/* TEXT COLUMN */}
       <Col xs={12} md={5} className="px-0 ">
-        <h2 className="text-capitalize">welcome to my</h2>
-        <h2 className="text-capitalize">My mountaineering journeys</h2>
+        <h1 className="text-capitalize">
+          welcome to my mountaineering journeys
+        </h1>
 
         <p>
           I grew up in a small town in Morocco, where there was little
@@ -30,7 +31,7 @@ const Story = () => {
           className="text-uppercase fw-bold"
           onClick={() => (window.location.href = '/My_Story')}
         >
-          Welcome to my journey
+          Read My Story
         </Button>
       </Col>
 
@@ -42,13 +43,12 @@ const Story = () => {
       >
         <img
           src={S2}
-          alt="Milieu"
-          className="img-fluid"
+          alt="journey"
+          className=""
           style={{
-            width: '70%', // 👉 image plus petite que le texte
-            height: 'auto',
+            width: '50%', // 👉 image plus petite que le texte
+            height: '80vh',
             objectFit: 'contain', // 👉 garde les proportions
-            display: 'block',
           }}
         />
       </Col>

@@ -20,6 +20,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <MyNavbar />
+
         <ScrollRestoration />
         {/* 👇 THIS IS REQUIRED */}
         <Outlet />

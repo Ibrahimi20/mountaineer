@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import logo from '../assets/nelly-attar-logo-black-acd32e59_Signateur.svg';
 
 const navItems = [
@@ -88,7 +88,7 @@ function Footer() {
                 rel="noreferrer"
                 className="text-light"
               >
-                <FaTiktok size={28} />
+                <FaLinkedinIn size={28} />
               </a>
             </div>
           </Col>
