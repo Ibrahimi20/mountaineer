@@ -5,6 +5,7 @@ import Video from '../assets/video/k2-winter-nimsdai-d.mp4';
 const SplashHero = () => {
   return (
     <section
+      id="section-1"
       className="position-relative text-white"
       style={{ height: '100vh', overflow: 'hidden' }}
     >
@@ -78,7 +79,7 @@ const SplashHero = () => {
           href="/My_Story"
           className="btn mt-4 px-4 py-2"
           style={{
-            backgroundColor: '#2AA8A1',
+            backgroundColor: 'orange',
             color: 'white',
             borderRadius: '8px',
             fontSize: '1.1rem',
@@ -86,8 +87,6 @@ const SplashHero = () => {
             boxShadow: '0px 3px 12px rgba(0,0,0,0.3)',
             transition: '0.3s',
           }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = '#218B86')}
-          onMouseOut={(e) => (e.target.style.backgroundColor = '#2AA8A1')}
         >
           Find out more
         </a>

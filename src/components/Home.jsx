@@ -14,7 +14,6 @@ import TalksPodcastsSection from './talksPodcastsSection';
 const Home = () => {
   return (
     <div className="bg-black">
-      {/* <MyNavbar /> */}
       <SplashHero></SplashHero>
       <LatestUpdate />
       <Story />

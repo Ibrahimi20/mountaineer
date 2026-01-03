@@ -36,7 +36,10 @@ const LatestUpdate = () => {
     <section className="latest-update-section bg-black">
       <Container>
         {/* Title */}
-        <h2 className="section-title  mb-4 text-white">LATEST UPDATE</h2>
+        <h2 className="section-title   text-white ">
+          <span className="title-underline animate-underline mb-1">LATEST</span>{' '}
+          NEWS AND PROJECT UPDATES
+        </h2>
 
         {/* Cards */}
         <Row className="latest-update-row justify-content-center">

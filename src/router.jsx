@@ -14,19 +14,11 @@ import ContactUs from './pages/ContactUs';
 import ClimbWithMe from './pages/movewithme';
 import RunWithMe from './pages/runwithme';
 import Checkout from './pages/Checkout';
+import MainLayout from './MainLayout';
 
 const router = createBrowserRouter([
   {
-    element: (
-      <>
-        <MyNavbar />
-
-        <ScrollRestoration />
-        {/* 👇 THIS IS REQUIRED */}
-        <Outlet />
-        <Footer />
-      </>
-    ),
+    element: <MainLayout />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/My_Story', element: <MyStory /> },

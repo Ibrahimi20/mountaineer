@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import talks_Video from '../assets/prodssets/Podcast.mp4';
+import { FiArrowRight } from 'react-icons/fi';
 
 const TalksPodcastsSection = () => {
   return (
-    <section className="py-5 talks-section">
+    <section className="py-2 talks-section">
       <div className="container">
         {/* ================= TALKS ================= */}
         <div className="row align-items-center g-4 mb-5 talk-row">
@@ -32,8 +33,11 @@ const TalksPodcastsSection = () => {
 
           {/* Learn more */}
           <div className="col-12 text-center">
-            <Link to="/talks" className="learn-more-link">
-              Learn more →
+            <Link to="/talks" className="learn-more">
+              <span className="icon-circle">
+                <FiArrowRight />
+              </span>
+              <span className="learn-text">Learn more</span>
             </Link>
           </div>
         </div>
@@ -68,8 +72,11 @@ const TalksPodcastsSection = () => {
 
           {/* Learn more */}
           <div className="col-12 text-center">
-            <Link to="/podcast" className="learn-more-link">
-              Learn more →
+            <Link to="/podcast" className="learn-more">
+              <span className="icon-circle">
+                <FiArrowRight />
+              </span>
+              <span className="learn-text">Learn more</span>
             </Link>
           </div>
         </div>

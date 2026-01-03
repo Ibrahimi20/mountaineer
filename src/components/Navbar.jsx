@@ -155,7 +155,7 @@ const Navbar = () => {
       </nav>
 
       {/* ✅ MOUNTAIN TICKER UNDER NAVBAR */}
-      <div
+      {/* <div
         style={{
           position: 'fixed',
           // top: scrolled ? '70px' : '90px', // adapt to navbar height
@@ -164,7 +164,7 @@ const Navbar = () => {
         }}
       >
         <MountainTicker />
-      </div>
+      </div> */}
       {/* MOBILE FULLSCREEN MENU */}
       <div
         className={`position-fixed top-0 start-0 w-100 h-100 d-lg-none 

@@ -29,6 +29,7 @@ const MyStory = () => {
   return (
     <div className="my-story-page">
       {/* HERO */}
+      {/* pop up de text my story, en dessous title :  */}
       <section className="story-hero d-flex align-items-center">
         <Container>
           <Row>

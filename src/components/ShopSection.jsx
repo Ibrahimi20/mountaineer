@@ -4,15 +4,21 @@ import { Link } from 'react-router-dom';
 import sweattshirt_black from '../assets/prodssets/sweatshirt_black.jpeg';
 import sweattshirt_white from '../assets/prodssets/sweatshirt_white.jpeg';
 import tshirt_ from '../assets/prodssets/T-shirt1.jpeg';
+import { FiArrowRight } from 'react-icons/fi';
 
 export default function ShopSection() {
   return (
-    <section className="py-5 products-section bg-black ">
+    <section className="products-section bg-black ">
       <div className="container text-white">
         {/* 🔹 Section Title */}
-        <div className="row mb-4">
+        <div className="row ">
           <div className="col text-center">
-            <h2 className="fw-bold section-title">Featured Products</h2>
+            <h2 className="fw-bold section-title ">
+              <span className="title-underline animate-underline">
+                Featured
+              </span>{' '}
+              Products
+            </h2>
             <p className="text-white">
               Wear your passion with purpose—customized T-shirts and sweatshirts
               that help fund and support mountaineering dreams
@@ -73,10 +79,13 @@ export default function ShopSection() {
         </div>
 
         {/* 🔹 Learn More Link */}
-        <div className="row mt-5">
+        <div className="row mt-3">
           <div className="col text-center">
-            <Link to="/shop" className="learn-more-link">
-              Learn more →
+            <Link to="/shop" className="learn-more">
+              <span className="icon-circle">
+                <FiArrowRight />
+              </span>
+              <span className="learn-text">Learn more</span>
             </Link>
           </div>
         </div>

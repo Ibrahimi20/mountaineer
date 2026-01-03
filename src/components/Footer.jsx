@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import logo from '../assets/nelly-attar-logo-black-acd32e59_Signateur.svg';
+import logo from '../assets/prodssets/images/logo.jpeg';
 
 const navItems = [
   { label: 'MY STORY', to: '/My_Story' },

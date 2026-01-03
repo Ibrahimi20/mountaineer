@@ -218,59 +218,63 @@ body {
   }
 }
 /* ticker */
+/* ============================= */
+/* TRUE INFINITE MOUNTAIN TICKER */
+/* ============================= */
 
 .mountain-ticker {
-  background: transparent;
-  margin-top: 56px; /* below navbar */
   height: 60px;
+  margin-top: 56px;
   overflow: hidden;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
+/* Wrapper */
 .ticker-wrapper {
-  width: 100%;
   overflow: hidden;
-  /* background: transparent !important; */
+  width: 100%;
 }
 
+/* Track */
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: scroll 18s linear infinite;
+  animation: ticker-scroll 25s linear infinite;
+  will-change: transform;
 }
 
-/* Mobile-first item */
+/* Item */
 .ticker-item {
-  display: flex;
-  flex-direction: column; /* NAME ON TOP */
-  align-items: center;
-  justify-content: center;
-  margin-right: 32px;
-  font-size: 0.8rem;
+  flex: 0 0 auto;
+  padding: 0 32px;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
   line-height: 1.1;
 }
 
-/* Name */
+/* Text */
 .mountain-name {
+  color: #fff;
   font-weight: 600;
-  color: #ffffff;
 }
 
-/* Altitude */
 .mountain-altitude {
   font-size: 0.7rem;
-  color: #38bdf8;
+  color: orange;
 }
 
-/* Smooth infinite scroll */
-@keyframes scroll {
+/* 🚀 REAL CONTINUOUS LOOP */
+@keyframes ticker-scroll {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
@@ -281,18 +285,24 @@ body {
   }
 
   .ticker-item {
+    padding: 0 48px;
     font-size: 0.95rem;
-    margin-right: 48px;
   }
 
   .mountain-altitude {
     font-size: 0.8rem;
   }
 }
+
+/* Pause on hover */
+.mountain-ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
 /* latest update */
 
 .latest-update-section {
-  padding: 60px 0;
+  padding: 7px 0;
   background-color: #f8f9fa;
 }
 
@@ -715,4 +725,110 @@ body {
   .media-wrapper {
     aspect-ratio: 4 / 3;
   }
+}
+/* Last Update  */
+.mystory_btn {
+  background-color: orange;
+}
+.title-underline {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trait orange */
+.title-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 4px;
+  width: 0; /* démarre à 0 pour l'animation */
+  background-color: orange;
+  border-radius: 4px;
+  animation: underlineGrow 0.7s ease-out forwards;
+}
+
+/* Animation */
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* EXPLORE SECTION IMAGES */
+/* ============================= */
+
+.explore-image {
+  width: 100%;
+  max-width: 420px; /* ⬅️ taille image réduite */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* ⬅️ centré horizontalement */
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .explore-image {
+    max-width: 460px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .explore-image {
+    max-width: 520px;
+  }
+}
+
+/* learn more */
+/* ============================= */
+/* LEARN MORE LINK */
+/* ============================= */
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: orange; /* 🟠 */
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Circle icon */
+.icon-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid orange; /* 🟠 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+  transition: all 0.3s ease;
+}
+
+.icon-circle svg {
+  font-size: 16px;
+}
+
+/* Text */
+.learn-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* ============================= */
+/* HOVER EFFECT */
+/* ============================= */
+
+.learn-more:hover .icon-circle {
+  background-color: orange; /* 🟠 cercle plein */
+  color: black;
+  transform: translateX(6px); /* animation */
 }
