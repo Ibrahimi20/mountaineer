@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import MountainTicker from './components/ountainTicker';
 
 const MainLayout = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -33,10 +35,10 @@ const MainLayout = () => {
 
   return (
     <>
-      <MyNavbar />
+      <MyNavbar  onMenuToggle={setMenuOpen}  />
 
       {/* 🎯 MountainTicker lié à la visibilité de la section 1 */}
-      {isHome && (
+      {isHome && !menuOpen &&  (
         <div
           style={{
             position: 'fixed',
